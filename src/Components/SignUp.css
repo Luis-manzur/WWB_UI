@@ -1,0 +1,14 @@
+.signUpMessage{
+    width: 100%;
+    text-align: center;
+    padding: 5%;
+    opacity: 0;
+    transform: scale(85%);
+    transition: 2s;
+}
+
+.signUpMessageZoom{
+    opacity: 1;
+    transform: scale(100%);
+    transition: 2s;
+}

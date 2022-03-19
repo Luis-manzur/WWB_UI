@@ -41,18 +41,39 @@
 
 .heroTitle{
     position: absolute;
-    font-size: 3rem;
+
     color: white;
 }
 
 .wwb{
     position: relative;
-    font-size: 2rem;
+
     color: white;
     margin-top: 25%;
 }
 
+.heroImageBottom{
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+}
 
+@keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    40% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 
 
   
