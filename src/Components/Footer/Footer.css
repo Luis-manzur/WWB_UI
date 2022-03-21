@@ -26,17 +26,18 @@
 
 .footerHeading{
     margin-bottom: 2.2rem;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .footerText{
-    margin-bottom: 2.2rem;
-    font-size: 20px;
+    margin-bottom: 0rem;
+    font-size: 16px;
 }
 
 .footerLinks{
     display: flex;
     justify-content: center;
+    font-size: 12px;
     grid-template-columns: repeat(auto-fit,
     minmax(255px, 1fr));
     grid-row-gap: 2rem;
@@ -51,7 +52,7 @@
 .footerLinkItems{
     display: flex;
     align-items: flex-start;
-    margin: 16px;
+    margin: 10px;
 }
 
 .footerContainer .landingPageLink{
