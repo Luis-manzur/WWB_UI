@@ -16,6 +16,7 @@
 .sliderImage{
     width: 40%;
     object-fit: contain;
+    filter: drop-shadow(0 0 0.5rem #242424);
 }
 
 .sliderContent{

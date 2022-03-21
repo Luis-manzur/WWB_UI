@@ -35,3 +35,7 @@
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
+.loginInput{
+    display: flex;
+    margin: 1.5rem;
+}
