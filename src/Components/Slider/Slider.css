@@ -1,7 +1,7 @@
 .slider{
     display: flex;
     align-items: center;
-    margin: 20px;
+    margin-left: 20%;
     opacity: 0;
     transform: scale(85%);
     transition: 2s;
@@ -15,6 +15,7 @@
 
 .sliderImage{
     width: 40%;
+    object-fit: contain;
 }
 
 .sliderContent{
@@ -23,15 +24,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10rem;
     text-align: center;
 }
 
 .sliderTitle{
     text-align: center;
-    font-size: 2rem;
+    padding-left: 30%;
 }
 
-.sliderText{
-    font-size: 1.5rem;
+.slider p{
+    padding-left: 30%;
 }

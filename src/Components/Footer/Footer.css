@@ -1,0 +1,63 @@
+.footerContainer{
+    background-color: #242424;
+    padding: 2rem 0 0rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.footerContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0rem;
+    padding: 1rem;
+    color: white;
+    width: 70vw;
+}
+
+.footerContent p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footerHeading{
+    margin-bottom: 2.2rem;
+    font-size: 24px;
+}
+
+.footerText{
+    margin-bottom: 2.2rem;
+    font-size: 20px;
+}
+
+.footerLinks{
+    display: flex;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit,
+    minmax(255px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 20px;
+}
+
+.footerLinkWrapper{
+    display: grid;
+    
+}
+
+.footerLinkItems{
+    display: flex;
+    align-items: flex-start;
+    margin: 16px;
+}
+
+.footerContainer .landingPageLink{
+    margin: 1rem;
+}
+
+.footerAdress{
+    font-size: 0.7rem;
+}
