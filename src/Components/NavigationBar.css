@@ -1,0 +1,22 @@
+.navbar{
+    height: 80px;
+    padding: 0px 10px;
+}
+
+@media screen and (max-width: 990px) {
+    .d-flex{
+        margin-top: 10px;
+        display: initial !important;
+    }
+
+    
+    .show{
+        background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    }
+
+    .btn{ 
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    
+}
