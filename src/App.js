@@ -1,11 +1,10 @@
+import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import NavigationBar from './Components/NavigationBar';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import NavigationBar from './Components/NavigationBar/NavigationBar';
+import LandingPage from './Pages/LandingPage/LandingPage';
+import LogIn from './Pages/Login/LogIn';
+import SingUp from './Pages/Register/SingUp';
 
-// Components
-import HomePage from './Pages/HomePage';
-import SingUp from './Components/SingUp';
-import LogIn from './Components/LogIn'
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
       <Router>
           <NavigationBar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path='/register' element={<SingUp />} />
           <Route path='/login' element={<LogIn />} />
         </Routes>

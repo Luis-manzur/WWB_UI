@@ -1,0 +1,38 @@
+.navbar{
+    height: 80px;
+    padding: 0px 10px;
+}
+
+.btn-navbar{
+    background-color: orange;
+    border: none;
+}
+
+.btn-navbar:hover{
+    background-color: rgb(187, 121, 0);
+}
+
+
+
+
+@media screen and (max-width: 990px) {
+    .d-flex{
+        margin-top: 10px;
+        display: initial !important;
+    }
+
+    
+    .show{
+        background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    }
+
+    .btn{ 
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    
+    .navbar-collapse{
+        text-align: center;
+    }
+    
+}

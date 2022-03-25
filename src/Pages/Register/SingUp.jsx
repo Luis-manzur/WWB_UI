@@ -17,6 +17,8 @@ const SingUp = () => {
     threshold: 0.4,
   });
   return (
+    <div className="bg">
+
     <div
       className={inView ? "signUpMessage signUpMessageZoom" : "signUpMessage"}
       ref={ref}
@@ -85,12 +87,13 @@ const SingUp = () => {
               />
               <label for="floatingPhoneNumber">Phone number</label>
             </div>
-            <Button className="btn-form">Sign up</Button>
+            <button className="btn btn-form">Sign up</button>
             
           </div>
         </div>
       </div>
     </div>
+    </ div>
   );
 };
 
