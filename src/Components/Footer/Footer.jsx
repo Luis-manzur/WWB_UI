@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../../src/index.css';
-import Login from '../../Pages/Login/Login';
-import Register from '../../Pages/Register/Register';
+import LogIn from '../../Pages/Login/LogIn';
+
 import './Footer.css';
 import AboutUs from '../../Pages/AboutUs/AboutUs';
+import SingUp from '../../Pages/Register/SingUp';
 
 function Footer() {
   return (
@@ -20,8 +21,8 @@ function Footer() {
             <div className='footerLinks'>
                 <div className='footerLinkWrapper'>
                     <div className='footerLinkItems'>
-                        <Link to='/register' element={<Register />} className = 'landingPageLink'>Registrate</Link>
-                        <Link to='/login' element={<Login />} className = 'landingPageLink'>Inicio sesión</Link>
+                        <Link to='/register' element={<SingUp />} className = 'landingPageLink'>Registrate</Link>
+                        <Link to='/login' element={<LogIn />} className = 'landingPageLink'>Inicio sesión</Link>
                         <Link to='/aboutus' element={<AboutUs />} className = 'landingPageLink'>About us</Link>
                     </div>
                 </div>

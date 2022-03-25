@@ -1,6 +1,5 @@
 import React from 'react';
 import './Hero.css';
-import Banner from '../Components/Banner/Banner';
 
 function Hero({ children }) {
   return (

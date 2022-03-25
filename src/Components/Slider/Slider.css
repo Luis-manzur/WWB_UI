@@ -1,10 +1,12 @@
 .slider{
     display: flex;
     align-items: center;
-    margin-left: 20%;
+    margin-left:20%;
+    margin-right: 20%;
     opacity: 0;
     transform: scale(85%);
     transition: 2s;
+
 }
 
 .sliderZoom{

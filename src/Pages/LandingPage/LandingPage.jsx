@@ -2,13 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Banner from '../../Components/Components/Banner/Banner';
 import Hero from '../../Components/Hero/Hero';
-import Login from '../Login/Login';
+import Login from '../Login/LogIn';
 import '../../../src/index.css';
 import AboutWWB from '../../Components/AboutWWB/AboutWWB';
 import Title from '../../Components/Title/Title';
 import Footer from '../../Components/Footer/Footer';
 import './LandingPage.css';
 import Slider from '../../Components/Slider/Slider';
+import LogIn from '../Login/LogIn';
 
 
 function LandingPage() {
@@ -16,7 +17,7 @@ function LandingPage() {
     <>
       <Hero>
         <Banner title='World Wide Booking' text='El mundo a solo unos clicks de distancia'>
-            <Link to='/login' element={<Login></Login>} className = 'landingPageLink'>Buscar hoteles</Link>
+            <Link to='/login' element={<LogIn/>} className = 'landingPageLink'>Buscar hoteles</Link>
         </Banner>
       </Hero>
       <AboutWWB />

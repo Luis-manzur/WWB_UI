@@ -1,37 +1,38 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar, Button, Container } from 'react-bootstrap';
 import './NavigationBar.css'
+import { useNavigate } from "react-router-dom";
 
 
 function NavigationBar() {
-  return (
-    <Navbar bg='dark' variant='dark' sticky='top' expand='sm' collapseOnSelect>
-        <Navbar.Brand>
-            WorldWideBooking
-        </Navbar.Brand>
+    const navigate = useNavigate();
 
-        <Navbar.Toggle />
+    const HandleLogin = () => {
+        navigate('/login')
+      }
 
-        <Navbar.Collapse>
-            <Nav>
-                <NavDropdown title='Ingresar'>
-                    <NavDropdown.Item href='/login' bg='dark' variant='dark'>Iniciar sesión</NavDropdown.Item>
-                    <NavDropdown.Divider></NavDropdown.Divider>
-                    <NavDropdown.Item href='/register' bg='dark' variant='dark'>Registrarse</NavDropdown.Item>
-                </NavDropdown>
-                
-                <Nav.Link href='/login'>Iniciar sesión</Nav.Link>
-                <Nav.Link href='/register'>Registrarse</Nav.Link>
-                <Nav.Link href='/logout'>Cerrar sesión</Nav.Link>
-                <Nav.Link href='/aboutus'>Quienes somos</Nav.Link>
-            </Nav>
-        </Navbar.Collapse>
-        
-        
-
-    </Navbar>
-  )
+    return (
+        <Navbar bg="dark" variant='dark' sticky='top' expand='lg' collapseOnSelect>
+            <Container fluid>
+                <Navbar.Brand href="/">World Wide Booking</Navbar.Brand>
+                <Navbar.Toggle aria-controls="navbarScroll" />
+                <Navbar.Collapse id="navbarScroll">
+                    <Nav
+                        className="me-auto my-2 my-lg-0"
+                        navbarScroll
+                    >
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/search">Search</Nav.Link>
+                        <Nav.Link href="/about">About us</Nav.Link>
+                    </Nav>
+                    <Button className="d-flex btn-navbar" onClick={HandleLogin}>
+                        Log in
+                    </Button>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+    )
 }
 
 export default NavigationBar
