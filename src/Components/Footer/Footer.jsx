@@ -23,7 +23,7 @@ function Footer() {
                     <div className='footerLinkItems'>
                         <Link to='/register' element={<SingUp />} className = 'landingPageLink'>Registrate</Link>
                         <Link to='/login' element={<LogIn />} className = 'landingPageLink'>Inicio sesión</Link>
-                        <Link to='/aboutus' element={<AboutUs />} className = 'landingPageLink'>About us</Link>
+                        <Link to='/about' element={<AboutUs />} className = 'landingPageLink'>About us</Link>
                     </div>
                 </div>
             </div>
