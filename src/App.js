@@ -21,8 +21,11 @@ function App() {
           <Route path='/register' element={<SingUp />} />
           <Route path='/login' element={<LogIn />} />
           <Route path='/verify' element={<Verify />} />
-          <Route path='/verify/success' element={<SuccessVerification />} />
           <Route path='/about' element={<AboutUs />} />
+
+          <Route path='/verify/success' element ={<Message message= 'You have been verified!' paragraph='Congratulations, you can now go explore the world!' source='https://upload.wikimedia.org/wikipedia/commons/1/10/Canaima_6.JPG'>
+            <Link to="/" className="btn btn-form">Home</Link>
+          </Message>} />
 
           <Route path='/register/success' element ={<Message message= 'We have sent a verification link to your email!' paragraph=' Please verify your email to start enjoying or platform.' source='https://media.architecturaldigest.com/photos/5852f927001c874267ed3d97/master/w_2300,h_973,c_limit/6-japan-luxury-hotels-ritz-carlton-okinawa.jpg'>
             <Link to="/" className="btn btn-form">Home</Link>
