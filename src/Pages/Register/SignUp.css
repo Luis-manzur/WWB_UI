@@ -51,8 +51,11 @@
 
 .bg {
     background-image: url("https://cdn.wallpapersafari.com/69/97/mviE5s.jpg") !important;
-    height: calc(100vh - 80px);
-    object-fit:fill;
+    object-fit:contain;
+    width: 100%;
+    height: 70vh;
+    z-index: -1;
+    position: absolute;
 }
 
 h2 {
@@ -85,3 +88,12 @@ h2 {
     border-radius: 5px;
 }
 
+.heroBannerContainer{
+    width: 40rem
+}
+
+.childrenContainer{
+    width: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+}
