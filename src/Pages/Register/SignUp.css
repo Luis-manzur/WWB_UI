@@ -5,12 +5,14 @@
     opacity: 0;
     transform: scale(85%);
     transition: 2s;
+    color: white;
 }
 
 .signUpMessageZoom{
     opacity: 1;
     transform: scale(100%);
     transition: 2s;
+    color: white;
 }
 
 .btn-form{ 
@@ -50,6 +52,7 @@
 .bg {
     background-image: url("https://cdn.wallpapersafari.com/69/97/mviE5s.jpg") !important;
     height: calc(100vh - 80px);
+    object-fit:fill;
 }
 
 h2 {
@@ -73,3 +76,12 @@ h2 {
 .WhiteText{
     color: white;
 }
+
+.line{
+    width: 10rem;
+    height: 5px;
+    margin: 0 auto;
+    background-color: orange;
+    border-radius: 5px;
+}
+
