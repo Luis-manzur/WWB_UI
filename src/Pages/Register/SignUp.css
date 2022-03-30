@@ -55,3 +55,21 @@
 h2 {
     color: white;
 }
+
+.container-form h1{
+    color: white;
+}
+
+.error {
+    color: red;
+    font-size: small;
+    text-align: start;
+}
+
+.generic-error{
+    color: white;
+}
+
+.WhiteText{
+    color: white;
+}
