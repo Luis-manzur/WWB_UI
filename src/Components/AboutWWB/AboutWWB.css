@@ -1,3 +1,7 @@
+/* 
+ CSS para el banner del LandingPage
+*/
+
 .benefits{
     padding: 3rem 0;
     margin-bottom: 1.5rem;
@@ -27,4 +31,71 @@
 .benefits p{
     width: 80%;
     margin: 0 auto;
+}
+
+/* 
+ CSS para el banner del AboutUs
+*/
+
+.benefitsObserve{
+    padding: 0.1rem;
+    margin-bottom: 3.5rem;
+    opacity: 0;
+    transform: scale(85%);
+    transition: 2s;
+}
+
+.benefitsObserveZoom{
+    opacity: 1;
+    transform: scale(100%);
+    transition: 2s;
+}
+
+.benefitsObserve{
+    background: whitesmoke;
+    text-align: center;
+}
+
+.benefitsCenterObserve{
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+    minmax(255px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 20px;
+}
+
+/* Css para el texto de about us */
+
+.texto{
+    width: 65vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+
+
+.title{
+    opacity: 1;
+    transform: scale(85%);
+    text-align: center;
+    margin-bottom: 4rem;
+    transition: 2s;
+}
+
+.title h4{
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.title div{
+    width: 10rem;
+    height: 5px;
+    margin: 0 auto;
+    background-color: orange;
+    border-radius: 5px;
 }
