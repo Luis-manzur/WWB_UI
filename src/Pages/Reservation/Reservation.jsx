@@ -17,20 +17,20 @@ const Reservation = () => {
     const [loading, setLoading] = useState(true);
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
-    const [adults, setAdults] = useState('');
-    const [kids, setKids] = useState('');
-    const [plan, setPlan] = useState('');
+    const [guests, setGuests] = useState({
+        kids: 1,
+        adults: 0,
+    })
 
     const navigate = useNavigate();
 
     const [error, setError] = useState({
         generic: ''
     });
-    const calculateDaysLeft = (startDate, endDate) => {
-        if (!moment.isMoment(startDate)) startDate = moment(startDate);
-        if (!moment.isMoment(endDate)) endDate = moment(endDate);
-        return endDate.diff(startDate, "days");
-    };
+
+    const HandleChange = ({ target: { name, value } }) => {
+        setGuests({ ...guests, [name]: value });
+      };
     useEffect(() => {
         setLoading(true);
         fetch('http://142.93.61.14:9000/accommodations/' + slugName + '/', {
@@ -67,12 +67,13 @@ const Reservation = () => {
         event.preventDefault()
         setError('')
         const jsonBody = JSON.stringify({
-          "plan": plan,
-          "entrance_date": startDate.getFullYear() + "-" + (startDate.getMonth() + 1) + "-" + startDate.getDate()
-          ,
-          "departure_date": endDate.getFullYear() + "-" + (endDate.getMonth() + 1) + "-" + endDate.getDate()
+          "plan": document.getElementById('plan').value,
+          "entrance_date": startDate.getFullYear() + "-" + (startDate.getMonth() + 1) + "-" + startDate.getDate(),
+          "departure_date": endDate.getFullYear() + "-" + (endDate.getMonth() + 1) + "-" + endDate.getDate(),
+          "kids": guests.kids,
+          "adults": guests.adults
         })
-        fetch('http://127.0.0.1:8000/accommodations/' + slugName + '/reserve/', {
+        fetch('http://142.93.61.14:9000/accommodations/' + slugName + '/reserve/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Authorization': localStorage.getItem('token') },
           body: jsonBody
@@ -84,14 +85,16 @@ const Reservation = () => {
         })
           .then(
             data => {
-              navigate('/reserve/success')
+                navigate('/payments/' + data.id)
             }
           ).catch(error => {
             error.json().then((body) => {
               let plan = ''
               let generic = ''
               let endDate = ''
-              let startDate
+              let startDate = ''
+              let adults = ''
+              let kids = ''
               if (body.departure_date) {
                 endDate = body.departure_date[0]
               }
@@ -101,11 +104,17 @@ const Reservation = () => {
               if (body.plan) {
                 plan = body.plan[0]
               }
+              if (body.adults) {
+                plan = body.adults[0]
+              }
+              if (body.kids) {
+                plan = body.kid[0]
+              }
               if (body.non_field_errors) {
                 generic = body.non_field_errors[0]
               }
-              setError({ plan: plan, endDate: endDate, startDate: startDate, generic: generic })
-              navigate('/payment/success')
+              setError({ plan: plan, endDate: endDate, startDate: startDate, generic: generic, kids: kids, adults: adults })
+              
             })
           })
       }
@@ -153,7 +162,7 @@ const Reservation = () => {
                         <div className="col-md-12 col-12">
                             <div className="form-group">
                                 <label htmlFor="payment" className="font-weight-bolder">Plan</label>
-                                <select className="form-control" nChange={(plan) => setPlan(plan)}>
+                                <select className="form-control" id="plan">
                                     {accommodation.plans.map((plan) =>
                                         <option value={plan.id}>{plan.name}</option>
                                     )}
@@ -164,13 +173,13 @@ const Reservation = () => {
                             <div className="col-md-6 col-12">
                                 <div className="form-group">
                                     <label htmlFor="Fromdate" className="font-weight-bolder mr-3">Adults</label>
-                                    <input type='number' name='adults' onChange={(kids) => setKids(kids)} className="form-control" />
+                                    <input type='number' name='adults' onChange={HandleChange} className="form-control" />
                                 </div>
                             </div>
                             <div className="col-md-6 col-12">
                                 <div className="form-group">
-                                    <label htmlFor="Fromdate" className="font-weight-bolder mr-3">Kids</label>
-                                    <input type='number' name='kids' onChange={(adults) => setAdults(adults)} className="form-control" />
+                                    <label htmlFor="Fromdate" className="font-weight-bolder mr-3">kids</label>
+                                    <input type='number' name='kids' onChange={HandleChange} className="form-control" />
                                 </div>
                             </div>
                         </div>

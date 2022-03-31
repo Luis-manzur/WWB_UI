@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom';
 import '../Accommodations/Accommodations.css'
+import './AccommodationDetail.css'
 
 import Spinner from '../../Components/Spinner';
 import AccommodationBanner from '../../Components/AccommodationBanner/AccommodationBanner';
@@ -15,9 +16,16 @@ function AccommodationDetail() {
         generic: ''
     });
 
+    const navigate = useNavigate()
+
+    const rate = () =>{
+        navigate('/accommodations/' + slugName + '/rate')
+    }
+
+
     useEffect(() => {
         setLoading(true);
-        fetch('http://127.0.0.1:8000/accommodations/' + slugName + '/', {
+        fetch('http://142.93.61.14:9000/accommodations/' + slugName + '/', {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
         }).then(data => {
@@ -55,7 +63,7 @@ function AccommodationDetail() {
             </AccommodationBanner>}
             <ul className='gridAccommodations'>
                 {accommodation.rooms.map((room) => <li className="AccommodationCard">
-                    <img className="AccommodationImage" src={'https://res.cloudinary.com/universidad-metropolitana/' + accommodation.principal_image} alt={accommodation.name} />
+                    <img className="AccommodationImage" src={'https://res.cloudinary.com/universidad-metropolitana/' +room.image} alt={accommodation.name} />
                     <div>
                         <h2 className='AccommodationName' >{room.name}</h2>
                         <br />
@@ -65,8 +73,12 @@ function AccommodationDetail() {
                         <p className='AccommodationRating'>Beds: {room.beds}</p>
                     </div>
                 </li>)}
-                <div></div>
             </ul>
+
+            <div className="col-md-12 col-12 float-right">
+                <button className="btn btn-rate" data-toggle="modal" data-target="#thanks" onClick={rate}>Rate your experience</button>
+            </div>
+
         </div>
 
 

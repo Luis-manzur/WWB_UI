@@ -1,0 +1,13 @@
+.btn-rate {
+    color: white;
+    background-color: orange;
+    margin-top: 20px;
+    width: 80%;
+    margin-left: calc(50% - 40%);
+    margin-bottom: 20px;
+}
+
+.btn-rate:hover{
+    color: white;
+    background-color: rgb(194, 128, 3);
+}

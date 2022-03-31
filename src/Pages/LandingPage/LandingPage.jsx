@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Banner from '../../Components/Components/Banner/Banner';
 import Hero from '../../Components/Hero/Hero';
-import Login from '../Login/LogIn';
 import '../../../src/index.css';
 import AboutWWB from '../../Components/AboutWWB/AboutWWB';
 import Title from '../../Components/Title/Title';
@@ -17,7 +16,7 @@ function LandingPage() {
     <>
       <Hero>
         <Banner title='World Wide Booking' text='The world just a few clicks away'>
-            <Link to='/login' element={<LogIn/>} className = 'landingPageLink'>Search Hotels</Link>
+            <Link to='/search' className = 'landingPageLink'>Search Hotels</Link>
         </Banner>
       </Hero>
       <AboutWWB />

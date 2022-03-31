@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import "bootstrap/dist/css/bootstrap.css";
 
 import { useNavigate, Link } from 'react-router-dom'
+import GoogleSocialAuth from "../GoogleLogin/GoogleLogin";
 
 const LogIn = () => {
 
@@ -35,7 +36,7 @@ const LogIn = () => {
       "email": user.email,
       "password": user.password
     })
-    fetch('http://127.0.0.1:8000/users/login/', {
+    fetch('http://142.93.61.14:9000/users/login/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: jsonBody
@@ -49,8 +50,10 @@ const LogIn = () => {
         data => {
           localStorage.removeItem('token')
           localStorage.removeItem('user')
+          localStorage.removeItem('name')
           localStorage.setItem('token', 'Token ' + data.access_token)
           localStorage.setItem('user', data.user.username)
+          localStorage.setItem('name', data.user.first_name + ' ' + data.user.last_name)
           navigate('/')
         }
       ).catch(error => {
@@ -110,6 +113,7 @@ const LogIn = () => {
                 <label for="floatingPassword">Password</label>
               </div>
               <button className="btn btn-form" onClick={login}>Log in</button>
+              <GoogleSocialAuth/>
               <p className="WhiteText d-flex">Not registered?<Link to="/register" className="formLink">Register</Link></p>
             </form>
           </div>

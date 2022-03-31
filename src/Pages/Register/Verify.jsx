@@ -32,7 +32,7 @@ const Verify = () => {
             "token": user.token,
 
         })
-        fetch('http://127.0.0.1:8000/users/verify/', {
+        fetch('http://142.93.61.14:9000/users/verify/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: jsonBody

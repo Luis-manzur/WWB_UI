@@ -107,10 +107,14 @@
     border: solid;
     height: 300px;
     width: 300px;
+    margin-left: calc(50% - 150px);
+    margin-bottom: 20px;
 }
 
 .profilepicture{
     object-fit: contain;
+    height: fit-content;
+    position: relative;
 }
 
 .benefits12{
@@ -119,8 +123,8 @@
 }
 
 .benefits12{
-    background: whitesmoke;
     text-align: center;
+    height: calc(100vh - 80px);
 }
 
 .benefitsCenter12{

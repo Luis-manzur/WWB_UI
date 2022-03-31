@@ -16,7 +16,7 @@ function Accommodations() {
 
     useEffect(() => {
         setLoading(true);
-        fetch('http://127.0.0.1:8000/accommodations/?city=' + city, {
+        fetch('http://142.93.61.14:9000/accommodations/?city=' + city, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json', 'Authorization': localStorage.getItem('token') },
         }).then(data => {

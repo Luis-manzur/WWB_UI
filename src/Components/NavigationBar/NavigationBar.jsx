@@ -12,6 +12,9 @@ function NavigationBar() {
     const HandleLogin = () => {
         navigate('/login')
       }
+    const HandleProfile = () => {
+        navigate('/profile/' + user)
+      }
 
     return (
         <Navbar bg="dark" variant='dark' sticky='top' expand='lg' collapseOnSelect>
@@ -30,7 +33,7 @@ function NavigationBar() {
                     {!user && <Button className="d-flex btn-navbar" onClick={HandleLogin}>
                         Log in
                     </Button> }
-                    {user && <Button className="d-flex btn-navbar" onClick={HandleLogin}>
+                    {user && <Button className="d-flex btn-navbar" onClick={HandleProfile}>
                         {user}
                     </Button> }
 

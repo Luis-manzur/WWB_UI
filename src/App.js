@@ -6,15 +6,14 @@ import LandingPage from './Pages/LandingPage/LandingPage';
 import LogIn from './Pages/Login/LogIn';
 import SingUp from './Pages/Register/SingUp';
 import Verify from './Pages/Register/Verify';
-import Message from './Components/Message/Message';
 import Search from './Pages/Search/Search';
 import MessageBanner from './Components/MessageBanner/MessageBanner';
 import Accommodations from './Pages/Accommodations/Accommodations';
 import Profile from './Pages/Profile/Profile';
 import AccommodationDetail from './Pages/AccommodationDetail/AccommodationDetail';
 import Reservation from './Pages/Reservation/Reservation';
-
-
+import CommentInput from './Pages/CommentInput';
+import Payment from './Pages/Payments/Payments';
 
 function App() {
   return (
@@ -28,10 +27,11 @@ function App() {
           <Route path='/verify' element={<Verify />} />
           <Route path='/about' element={<AboutUs />} />
           <Route path='/search' element={<Search />} />
-          <Route path = '/profile' element={<Profile />} />
+          <Route path = '/profile/:username' element={<Profile />} />
           <Route path = '/accommodations/:slugName' element={<AccommodationDetail />} />
           <Route path='accommodations/search/:city' element={<Accommodations />} />
           <Route path='accommodations/:slugName/reserve' element={<Reservation />} />
+          <Route path='payments/:id' element={<Payment />} />
 
           <Route path='/verify/success' element ={<MessageBanner message= 'You have been verified!' paragraph='Congratulations, you can now go explore the world!' source='https://upload.wikimedia.org/wikipedia/commons/1/10/Canaima_6.JPG'>
             <Link to="/login" className="btn btn-form">Log in</Link>
@@ -44,6 +44,9 @@ function App() {
           <Route path='/error' element ={<MessageBanner message= 'Error: 404' paragraph = 'Page not found' source='https://snowkingmountain.com/wp-content/uploads/2019/02/snow-king-lodge-lobby-pool.jpg'>
             <Link to="/" className="btn btn-form">Home</Link>
           </MessageBanner>} />
+
+          <Route path='/accommodations/:slugname/rate' element ={<CommentInput />}/>
+        
 
         </Routes>
       </Router>
