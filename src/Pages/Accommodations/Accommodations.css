@@ -1,0 +1,40 @@
+.AccommodationImage{
+    height: 230px;
+    width:340px;
+    position: relative;
+}
+
+.AccommodationCard{
+    list-style: none;
+    font-size: 1.5rem;
+    display: flex;
+    margin: 40px 60px;
+    border-bottom: 5px solid orange;
+    padding-bottom: 20px;
+}
+.AccommodationImage {
+    border-radius: 10px;
+    background-color: azure;
+}
+
+.movieCard:hover{
+    opacity: 0.7;
+    transition: ease 0.5s;
+}
+
+.AccommodationName{
+    text-decoration: none;
+    margin-left: 60px;
+    color: black;
+
+}
+
+img, svg {
+    vertical-align:baseline;
+    margin-bottom: 2px;
+}
+
+.AccommodationRating{
+    margin-left: 60px;
+    color: black;
+}
