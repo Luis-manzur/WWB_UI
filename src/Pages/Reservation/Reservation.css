@@ -1,0 +1,14 @@
+.BlackText{
+    color: black;
+}
+
+.btn-reservation{
+    background-color: orange;
+    color: white;
+    width: 100%;
+}
+
+.btn-reservation:hover{
+    background-color: rgb(190, 126, 7);
+    color: white;
+}

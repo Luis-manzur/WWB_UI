@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { FiUser } from 'react-icons/fi';
+import { FaComment, FaBookmark } from 'react-icons/fa';
 import { AiFillPhone, AiOutlineMail } from 'react-icons/ai';
 import '../../Components/AboutWWB/AboutWWB.css';
 import Footer from '../../Components/Footer/Footer'
+import Title from '../../Components/Title/Title';
 
 
 export default class Profile extends Component {
@@ -23,12 +25,16 @@ export default class Profile extends Component {
 
   render() {
     return (
-      <section className='benefits'>
+      <section className='benefits12'>
+        <div className = 'imgContainerP'>  
+          <img className = 'profilepicture' src = 'https://uxwing.com/wp-content/themes/uxwing/download/12-peoples-avatars/no-profile-picture.png'></img>
+        </div>
+        <Title title = {this.state.username} />
+
           <div className='benefitsCenter'>
               <article className ='benefit'>
                   <span><FiUser /></span>
-                  <h6>User: {this.state.username}</h6>
-                  <h6>Name: {this.state.first_name}{this.state.last_name}</h6>
+                  <h6>Name: {this.state.first_name} {this.state.last_name}</h6>
               </article>
               <article className ='benefit'>
                   <span><AiOutlineMail /></span>
@@ -38,33 +44,16 @@ export default class Profile extends Component {
                   <span><AiFillPhone /></span>
                       <h6>Phone number: {this.state.phone_number}</h6>
               </article>
+              <article className ='benefit'>
+                  <span><FaComment /></span>
+                  <h6>Comments: {this.state.comments}</h6>
+              </article>
           </div>
 
           <Footer />
 
           <section className='benefits' >
-      <div className='title'>
-        </div>
-          <div className='benefitsCenter'>
-            <article className ='benefit'>
-              <p>
-                Our vision is to become the leading booking platform in the world, providing millions of customers with our services around the world.
-              </p>
-            </article>
-
-            <article className ='benefit'>
-              <p>
-                Our mission is to provide our customers with the best sevice, making available to them thousands of accommodations around the world. 
-              </p>
-            </article>
-
-            <article className ='benefit'>
-              <p>
-                Commitment to our clients. At World Wide Booking our clients are our priority, that's why we ae always looking for ways to give them a better service.
-              </p>
-            </article>
-
-          </div>
+      
 
       </section>
 

@@ -8,7 +8,6 @@ import AccommodationBanner from '../../Components/AccommodationBanner/Accommodat
 
 function AccommodationDetail() {
     const { slugName } = useParams();
-    const navigate = useNavigate();
     const [accommodation, setAccommodations] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState({
@@ -52,7 +51,7 @@ function AccommodationDetail() {
     return (
         <div>
             {<AccommodationBanner message={accommodation.name} paragraph='Do not miss the best prices!' source={'https://res.cloudinary.com/universidad-metropolitana/' + accommodation.principal_image}>
-                <Link to="/login" className="btn btn-form">Book Now</Link>
+                <Link to={"/accommodations/" + slugName + '/reserve'} className="btn btn-form">Book Now</Link>
             </AccommodationBanner>}
             <ul className='gridAccommodations'>
                 {accommodation.rooms.map((room) => <li className="AccommodationCard">

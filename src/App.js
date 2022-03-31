@@ -31,13 +31,13 @@ function App() {
           <Route path = '/profile' element={<Profile />} />
           <Route path = '/accommodations/:slugName' element={<AccommodationDetail />} />
           <Route path='accommodations/search/:city' element={<Accommodations />} />
-          <Route path='accommodation/:slugName' element={<Reservation />} />
+          <Route path='accommodations/:slugName/reserve' element={<Reservation />} />
 
           <Route path='/verify/success' element ={<MessageBanner message= 'You have been verified!' paragraph='Congratulations, you can now go explore the world!' source='https://upload.wikimedia.org/wikipedia/commons/1/10/Canaima_6.JPG'>
             <Link to="/login" className="btn btn-form">Log in</Link>
           </MessageBanner>} />
 
-          <Route path='/payment/success' element ={<MessageBanner message= 'Your payment has been succesfully registered!' paragraph='We have sent you an email with information regarding your payment.' source ='https://i0.wp.com/www.thesuitelife.com.hk/wp-content/uploads/2020/07/Amangiri-USA-Camp-Sarika-Tent-1-Terrace_High-Res_26928.jpg?fit=2560%2C1405&ssl=1'>
+          <Route path='/payment/success' element ={<MessageBanner message= 'Your reservation has been succesfully registered!' paragraph='We have sent you an email with information regarding your payment.' source ='https://i0.wp.com/www.thesuitelife.com.hk/wp-content/uploads/2020/07/Amangiri-USA-Camp-Sarika-Tent-1-Terrace_High-Res_26928.jpg?fit=2560%2C1405&ssl=1'>
             <Link to="/" className="btn btn-form">Home</Link>
           </MessageBanner>} />
 

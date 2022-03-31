@@ -35,7 +35,7 @@ const LogIn = () => {
       "email": user.email,
       "password": user.password
     })
-    fetch('http://localhost:8000/users/login/', {
+    fetch('http://127.0.0.1:8000/users/login/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: jsonBody
@@ -47,7 +47,9 @@ const LogIn = () => {
     })
       .then(
         data => {
-          localStorage.setItem('token', 'token ' + data.access_token)
+          localStorage.removeItem('token')
+          localStorage.removeItem('user')
+          localStorage.setItem('token', 'Token ' + data.access_token)
           localStorage.setItem('user', data.user.username)
           navigate('/')
         }
