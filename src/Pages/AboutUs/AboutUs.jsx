@@ -26,7 +26,7 @@ function AboutUs() {
   return (
     <div>
       <SingleImageHero src={'https://www.theluxurysafaricompany.com/app/uploads/2019/09/miavana7.jpg'}>
-        <Banner title='Quienes somos?'>
+        <Banner title='About us'>
          <Link to='/' element={<LandingPage/>} className = 'landingPageLink'>Home</Link>
         </Banner>
       </SingleImageHero>
@@ -42,34 +42,30 @@ function AboutUs() {
         </h5>
       </div>
 
-      <Title title='Misión, visión y valores'></Title>
+      <Title title='Mission, Vision & Values'></Title>
 
       <section className={inView ? 'benefitsObserve benefitsObserveZoom' : 'benefitsObserve'} ref={ref}>
       <div className='title'>
         </div>
           <div className='benefitsCenterObserve'>
             <article className ='benefitObserve'>
-              <Title title='Nuestra visión'></Title>
+              <Title title='Our vision'></Title>
               <p>
-                Nuestra visión es conventirnos en la plataforma lider de booking en el mundo, 
-                brindándole a millones de clientes nuestros servicios alrededor del mundo.
+                Our vision is to become the leading booking platform in the world, providing millions of customers with our services around the world.
               </p>
             </article>
 
             <article className ='benefitObserve'>
-            <Title title='Nuestra misión'></Title>
+            <Title title='Our mission'></Title>
               <p>
-                Nuestra misión es brindarle a nuestros clientes el mejor sevicio, pondiendo a su
-                alcance miles de establecimientos alrededor del mundo.
+                Our mission is to provide our customers with the best sevice, making available to them thousands of accommodations around the world. 
               </p>
             </article>
 
             <article className ='benefitObserve'>
-              <Title title='Nuestros valores'></Title>
+              <Title title='Our values'></Title>
               <p>
-                Compromiso con nuestros clientes. En World Wide Booking nuestros clientes son
-                prioridad para nosotros, es por esto que siempre buscamos maneras de brindarles 
-                un mejor servicio.
+                Commitment to our clients. At World Wide Booking our clients are our priority, that's why we ae always looking for ways to give them a better service.
               </p>
             </article>
 
@@ -77,13 +73,13 @@ function AboutUs() {
 
       </section>
 
-      <Title title='Que ofrecemos?'></Title>
+      <Title title='What do we offer?'></Title>
 
       <section className='benefits'>
         <div className='benefitsCenter'>
           <article className ='benefit'>
               <span><RiReservedLine /></span>
-              <h5>Sistema de reservaciones</h5>
+              <h5>Booking engine</h5>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit minima excepturi 
                 illum tempora cupiditate sunt eum deserunt inventore atque debitis?
@@ -93,7 +89,7 @@ function AboutUs() {
       
           <article className ='benefit'>
               <span><MdPayments /> </span>
-              <h5>Sistema de pagos online</h5>
+              <h5>Online payment system</h5>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit minima excepturi 
                 illum tempora cupiditate sunt eum deserunt inventore atque debitis?
@@ -102,7 +98,7 @@ function AboutUs() {
 
           <article className ='benefit'>
               <span><BiHotel /> </span>
-              <h5>Búsqueda de establecimientos</h5>
+              <h5>Accommodation search engine</h5>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit minima excepturi 
                 illum tempora cupiditate sunt eum deserunt inventore atque debitis?

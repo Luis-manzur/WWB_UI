@@ -71,7 +71,7 @@ const Verify = () => {
                 ref={ref}
             >
                 <h1>We've send you a verification code to:  {userEmail}</h1>
-                <p>Remember to check spam.</p>
+                <p className="warning">Remember to check spam.</p>
                 <div className="container mt-4">
                     <div className="row justify-content-center mt-4">
                         <form className="col-md-6 col-sm-12 container-form">

@@ -31,7 +31,7 @@ const SuccessVerification = ( {children, message, paragraph, source} ) => {
         <br></br>
         <br></br>
         <br></br>
-        <Footer></Footer>
+
       </div>
       
     );

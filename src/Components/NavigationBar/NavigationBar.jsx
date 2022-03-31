@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 function NavigationBar() {
+    const user = localStorage.getItem('user')
     const navigate = useNavigate();
 
     const HandleLogin = () => {
@@ -26,9 +27,14 @@ function NavigationBar() {
                         <Nav.Link href="/search">Search</Nav.Link>
                         <Nav.Link href="/about">About us</Nav.Link>
                     </Nav>
-                    <Button className="d-flex btn-navbar" onClick={HandleLogin}>
+                    {!user && <Button className="d-flex btn-navbar" onClick={HandleLogin}>
                         Log in
-                    </Button>
+                    </Button> }
+                    {user && <Button className="d-flex btn-navbar" onClick={HandleLogin}>
+                        {user}
+                    </Button> }
+
+                    
                 </Navbar.Collapse>
             </Container>
         </Navbar>

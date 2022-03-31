@@ -47,7 +47,8 @@ const LogIn = () => {
     })
       .then(
         data => {
-          localStorage.setItem('token', data.access_token)
+          localStorage.setItem('token', 'token ' + data.access_token)
+          localStorage.setItem('user', data.user.username)
           navigate('/')
         }
       ).catch(error => {
@@ -76,7 +77,7 @@ const LogIn = () => {
         className={inView ? "signUpMessage signUpMessageZoom" : "signUpMessage"}
         ref={ref}
       >
-        <h1>Bienvenido de vuelta!</h1>
+        <h1>Welcome Back!</h1>
         <div className="container mt-4">
           <div className="row justify-content-center mt-4">
             <form className="col-6 container-form">

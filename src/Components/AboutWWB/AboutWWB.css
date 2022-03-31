@@ -99,3 +99,35 @@
     background-color: orange;
     border-radius: 5px;
 }
+
+
+.benefits12{
+    padding: 3rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.benefits12{
+    background: whitesmoke;
+    text-align: center;
+}
+
+.benefitsCenter12{
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+    minmax(255px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 20px;
+}
+
+.benefit span{
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.benefits p{
+    width: 80%;
+    margin: 0 auto;
+}

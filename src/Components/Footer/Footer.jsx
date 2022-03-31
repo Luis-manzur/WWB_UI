@@ -12,24 +12,24 @@ function Footer() {
     <div className='footerContainer'>
         <section className='footerContent'>
             <p className='footerHeading'>
-                Unete a nuestra plataforma para que puedas comenzar a planificar el viaje que siempre has querido hacer.
+                Join the World Booking experience and plan the vacations you have always wanted.
             </p>
             <p className='footerText'>
-                Contamos con miles de hoteles alrededor del mundo en cientos de paises.
+                We offer thousands of hotels all over the world. 
             </p>
 
             <div className='footerLinks'>
                 <div className='footerLinkWrapper'>
                     <div className='footerLinkItems'>
-                        <Link to='/register' element={<SingUp />} className = 'landingPageLink'>Registrate</Link>
-                        <Link to='/login' element={<LogIn />} className = 'landingPageLink'>Inicio sesión</Link>
+                        <Link to='/register' element={<SingUp />} className = 'landingPageLink'>Sign</Link>
+                        <Link to='/login' element={<LogIn />} className = 'landingPageLink'>Log In</Link>
                         <Link to='/about' element={<AboutUs />} className = 'landingPageLink'>About us</Link>
                     </div>
                 </div>
             </div>
 
             <h6 className='footerAdress'>
-            Autopista Gran Mariscal de Ayacucho - Ditribuidor Metropolitano Zona Rental Universidad Metropolitana, Urb. Terrazas del Ávila, Estado Miranda, Caracas - Venezuela código postal 1060
+            Autopista Francisco Fajardo - Distribuidor Metropolitano Zona Rental Universidad Metropolitana, Urb. Terrazas del Ávila, Estado Miranda, Caracas - Venezuela Zip Code 1060
             </h6>
 
             

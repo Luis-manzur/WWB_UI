@@ -5,9 +5,14 @@ import AboutUs from './Pages/AboutUs/AboutUs';
 import LandingPage from './Pages/LandingPage/LandingPage';
 import LogIn from './Pages/Login/LogIn';
 import SingUp from './Pages/Register/SingUp';
-import SuccessVerification from './Pages/Register/SuccessVerification';
 import Verify from './Pages/Register/Verify';
 import Message from './Components/Message/Message';
+import Search from './Pages/Search/Search';
+import MessageBanner from './Components/MessageBanner/MessageBanner';
+import Accommodations from './Pages/Accommodations/Accommodations';
+import Profile from './Pages/Profile/Profile';
+import AccommodationDetail from './Pages/AccommodationDetail/AccommodationDetail';
+import Reservation from './Pages/Reservation/Reservation';
 
 
 
@@ -22,26 +27,23 @@ function App() {
           <Route path='/login' element={<LogIn />} />
           <Route path='/verify' element={<Verify />} />
           <Route path='/about' element={<AboutUs />} />
+          <Route path='/search' element={<Search />} />
+          <Route path = '/profile' element={<Profile />} />
+          <Route path = '/accommodations/:slugName' element={<AccommodationDetail />} />
+          <Route path='accommodations/search/:city' element={<Accommodations />} />
+          <Route path='accommodation/:slugName' element={<Reservation />} />
 
-          <Route path='/verify/success' element ={<Message message= 'You have been verified!' paragraph='Congratulations, you can now go explore the world!' source='https://upload.wikimedia.org/wikipedia/commons/1/10/Canaima_6.JPG'>
-            <Link to="/" className="btn btn-form">Home</Link>
-          </Message>} />
+          <Route path='/verify/success' element ={<MessageBanner message= 'You have been verified!' paragraph='Congratulations, you can now go explore the world!' source='https://upload.wikimedia.org/wikipedia/commons/1/10/Canaima_6.JPG'>
+            <Link to="/login" className="btn btn-form">Log in</Link>
+          </MessageBanner>} />
 
-          <Route path='/register/success' element ={<Message message= 'We have sent a verification link to your email!' paragraph=' Please verify your email to start enjoying or platform.' source='https://media.architecturaldigest.com/photos/5852f927001c874267ed3d97/master/w_2300,h_973,c_limit/6-japan-luxury-hotels-ritz-carlton-okinawa.jpg'>
+          <Route path='/payment/success' element ={<MessageBanner message= 'Your payment has been succesfully registered!' paragraph='We have sent you an email with information regarding your payment.' source ='https://i0.wp.com/www.thesuitelife.com.hk/wp-content/uploads/2020/07/Amangiri-USA-Camp-Sarika-Tent-1-Terrace_High-Res_26928.jpg?fit=2560%2C1405&ssl=1'>
             <Link to="/" className="btn btn-form">Home</Link>
-          </Message>} />
+          </MessageBanner>} />
 
-          <Route path='/payment/success' element ={<Message message= 'Your payment has been succesfully registered!' paragraph='We have sent you an email with information regarding your payment.' source ='https://i0.wp.com/www.thesuitelife.com.hk/wp-content/uploads/2020/07/Amangiri-USA-Camp-Sarika-Tent-1-Terrace_High-Res_26928.jpg?fit=2560%2C1405&ssl=1'>
+          <Route path='/error' element ={<MessageBanner message= 'Error: 404' paragraph = 'Page not found' source='https://snowkingmountain.com/wp-content/uploads/2019/02/snow-king-lodge-lobby-pool.jpg'>
             <Link to="/" className="btn btn-form">Home</Link>
-          </Message>} />
-
-          <Route path='/booking/success' element ={<Message message= 'Your reservation has been completed successfully!' paragraph = 'We have sent you an email with additional information regarding your reservation.' source='https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F28%2F2016%2F02%2FVelaa-ULT0216.jpg'>
-            <Link to="/" className="btn btn-form">Home</Link>
-          </Message>} />
-
-          <Route path='/error' element ={<Message message= 'Error: 404' paragraph = 'Page not found' source='https://snowkingmountain.com/wp-content/uploads/2019/02/snow-king-lodge-lobby-pool.jpg'>
-            <Link to="/" className="btn btn-form">Home</Link>
-          </Message>} />
+          </MessageBanner>} />
 
         </Routes>
       </Router>

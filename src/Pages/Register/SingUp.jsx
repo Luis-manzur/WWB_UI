@@ -106,6 +106,8 @@ const SingUp = () => {
   return (
     <div className="bg">
 
+      <img classname = 'asdfg' src = 'https://cdn.wallpapersafari.com/69/97/mviE5s.jpg'></ img>
+
     <div
       className={inView ? "signUpMessage signUpMessageZoom" : "signUpMessage"}
       ref={ref}

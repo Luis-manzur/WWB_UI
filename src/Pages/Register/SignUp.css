@@ -5,14 +5,12 @@
     opacity: 0;
     transform: scale(85%);
     transition: 2s;
-    color: white;
 }
 
 .signUpMessageZoom{
     opacity: 1;
     transform: scale(100%);
     transition: 2s;
-    color: white;
 }
 
 .btn-form{ 
@@ -31,7 +29,9 @@
     color: #0d6efd;
 }
 
-
+.warning {
+    color: white;
+}
 
 .container-form{
     background: rgba(0, 0, 0, 0.5);
@@ -49,15 +49,24 @@
     color: orange;
 }
 
+.asdfg{
+    position: absolute;
+    object-fit: contain;
+    height:100%;
+}
+
 .bg {
-    background-image: url("https://cdn.wallpapersafari.com/69/97/mviE5s.jpg") !important;
-    object-fit:contain;
+
+    object-fit: cover;
     width: 100%;
-    height: 70vh;
+    height: calc(100vh - 80px);
     z-index: -1;
     position: absolute;
 }
 
+h1 {
+    color: white;
+}
 h2 {
     color: white;
 }
@@ -73,10 +82,6 @@ h2 {
 }
 
 .generic-error{
-    color: white;
-}
-
-.WhiteText{
     color: white;
 }
 
@@ -96,4 +101,8 @@ h2 {
     width: 10rem;
     margin-left: auto;
     margin-right: auto;
+}
+
+.WhiteText{
+    color: white;
 }

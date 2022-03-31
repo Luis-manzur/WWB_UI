@@ -7,26 +7,26 @@ import './AboutWWB.css';
 export default class AboutWWB extends Component {
     
     state = {
-        benefits:[
+        results:[
             {
                 icon: <FaHotel></FaHotel>,
-                title: 'Establecimientos',
-                description: 'Ponemos a tu alcance miles de establecimientos alrededor del mundo.'
+                title: 'Accommodations Everywhere',
+                description: 'Every accommodation around the world at your fingertips.'
             },
             {
                 icon: <FaMobileAlt></FaMobileAlt>,
-                title: 'Adaptable',
-                description: 'Puedes realizar reservaciones desde cualquier dispositivo en cualquier parte.'
+                title: 'Pervasive',
+                description: 'Book reservation at any time, anywhere.'
             },
             {
                 icon: <FaMoneyBill></FaMoneyBill>,
-                title: 'Presupuesto',
-                description: 'Puedes conseguir alojamientos que se adapten a tu presupuesto y necesidades.'
+                title: 'Budget Friendly',
+                description: 'Find accommodations to suit your budget and needs.'
             },
             {
                 icon: <HiOutlineCursorClick></HiOutlineCursorClick>,
-                title: 'Rápido',
-                description: 'Todo esto a tan solo un par de clicks de distancia.'
+                title: 'Instant',
+                description: 'Everything just a couple of clicks away.'
             }
         ]
     }
@@ -34,9 +34,9 @@ export default class AboutWWB extends Component {
   render() {
     return (
       <section className='benefits'>
-            <Title title='Que ofrece World Wide Booking?'></Title>
+            <Title title='What do we offer?'></Title>
             <div className='benefitsCenter'>
-                {this.state.benefits.map((item, index) => {
+                {this.state.results.map((item, index) => {
                     return(
                         <article key={index} className ='benefit'>
                             <span>{item.icon}</span>

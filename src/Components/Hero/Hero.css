@@ -4,7 +4,6 @@ img{
     height: 70vh;
     z-index: -1;
     position: absolute;
-
 }
 
 .heroContainer{
@@ -22,8 +21,6 @@ img{
 .topImage{
     animation: xfade infinite 20s;
 }
-
-
 
 
 @keyframes xfade {
