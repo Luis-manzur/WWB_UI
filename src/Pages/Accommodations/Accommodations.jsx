@@ -16,7 +16,7 @@ function Accommodations() {
 
     useEffect(() => {
         setLoading(true);
-        fetch('http://142.93.61.14:9000/accommodations/?city=' + city, {
+        fetch('https://worldwidebooking-mteim.ondigitalocean.app/accommodations/?city=' + city, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json', 'Authorization': localStorage.getItem('token') },
         }).then(data => {

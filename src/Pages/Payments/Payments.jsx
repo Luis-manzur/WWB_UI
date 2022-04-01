@@ -26,7 +26,7 @@ const Payment = () => {
     }
     useEffect(() => {
         setLoading(true);
-        fetch('http://142.93.61.14:9000/reservations/' + id + '/', {
+        fetch('https://worldwidebooking-mteim.ondigitalocean.app/reservations/' + id + '/', {
             method: 'GET',
             headers: { 'Content-Type': 'application/json', 'Authorization': localStorage.getItem('token') },
         }).then(data => {

@@ -33,7 +33,7 @@ const Reservation = () => {
       };
     useEffect(() => {
         setLoading(true);
-        fetch('http://142.93.61.14:9000/accommodations/' + slugName + '/', {
+        fetch('https://worldwidebooking-mteim.ondigitalocean.app/accommodations/' + slugName + '/', {
             method: 'GET',
             headers: { 'Content-Type': 'application/json', 'Authorization': localStorage.getItem('token') },
         }).then(data => {
@@ -73,7 +73,7 @@ const Reservation = () => {
           "kids": guests.kids,
           "adults": guests.adults
         })
-        fetch('http://142.93.61.14:9000/accommodations/' + slugName + '/reserve/', {
+        fetch('https://worldwidebooking-mteim.ondigitalocean.app/accommodations/' + slugName + '/reserve/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Authorization': localStorage.getItem('token') },
           body: jsonBody

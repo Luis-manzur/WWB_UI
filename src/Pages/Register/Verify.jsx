@@ -32,7 +32,7 @@ const Verify = () => {
             "token": user.token,
 
         })
-        fetch('http://142.93.61.14:9000/users/verify/', {
+        fetch('https://worldwidebooking-mteim.ondigitalocean.app/users/verify/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: jsonBody

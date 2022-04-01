@@ -48,7 +48,7 @@ const SingUp = () => {
       "phone_number": user.phoneNumber
 
     })
-    fetch('http://142.93.61.14:9000/users/signup/', {
+    fetch('https://worldwidebooking-mteim.ondigitalocean.app/users/signup/', {
       method:'POST',
       headers: {'Content-Type': 'application/json'},
       body: jsonBody

@@ -34,7 +34,7 @@ const CommentInput = () => {
   }
   const rate = () => {
 
-    fetch('http://142.93.61.14:9000/accommodations/' + slugName + '/rate/', {
+    fetch('https://worldwidebooking-mteim.ondigitalocean.app/accommodations/' + slugName + '/rate/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: jsonBody

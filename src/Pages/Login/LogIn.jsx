@@ -36,7 +36,7 @@ const LogIn = () => {
       "email": user.email,
       "password": user.password
     })
-    fetch('http://142.93.61.14:9000/users/login/', {
+    fetch('https://worldwidebooking-mteim.ondigitalocean.app/users/login/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: jsonBody

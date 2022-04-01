@@ -29,7 +29,7 @@ const Profile = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch('http://142.93.61.14:9000/users/' + username + '/', {
+    fetch('https://worldwidebooking-mteim.ondigitalocean.app/users/' + username + '/', {
       method: 'GET',
       headers: { 'Content-Type': 'application/json', 'Authorization': localStorage.getItem('token') },
     }).then(data => {
